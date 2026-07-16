@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background: white;
+    border-bottom: 1px solid #dddddd;
+}
+
+.navigation {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 0;
+    color: #2563eb;
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+}
+
+nav a {
+    color: #1f2937;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: #eff6ff;
+}
+
+.hero h2 {
+    max-width: 750px;
+    margin: 10px 0;
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 1.05;
+}
+
+.label {
+    color: #2563eb;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.search-form {
+    max-width: 650px;
+    display: flex;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #bbbbbb;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.search-form input {
+    flex: 1;
+}
+
+button {
+    padding: 14px 22px;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.light-section {
+    background: #f8fafc;
+}
+
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.hotel-card {
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    border-radius: 14px;
+}
+
+.hotel-image {
+    height: 220px;
+    display: grid;
+    place-items: center;
+    background: #dbeafe;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.hotel-content {
+    padding: 22px;
+}
+
+.location {
+    color: #64748b;
+}
+
+.contact-form {
+    max-width: 600px;
+    display: grid;
+    gap: 12px;
+}
+
+footer {
+    padding: 25px;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 0;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+}
